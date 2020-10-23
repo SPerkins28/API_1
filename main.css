@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'pokemon';
+    src: url(fonts/pokemon_solid.ttf);
+}
+
+.jumbotron {
+    background: url('/Projects/API_1/assets/pokemonDrk.jpg');
+    background-size: cover;
+    background-position: center;
+    color: yellow;
+    text-shadow: #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px; /*? Syntax --> text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit */
+    text-align: right;
+    height: 30vh;
+    font-family: pokemon;
+    letter-spacing: .25em;
+}
+
+body {
+    background-color: red;
+    font-family: pokemon;
+    letter-spacing: .15em;
+
+}
+
+.form {
+    display: flex;
+}
+
+.lead {
+    color: white;
+    text-shadow: #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px;
+    font-size: 12px;
+    letter-spacing: .25em;
+    padding-right: 1.75em;
+}
+
+#searchCol{
+    display: flex;
+}
+
+#seachBox {
+    margin-right: 10px;
+}
+
+.form-control {
+    margin-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchTextContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    margin-left: 10px;
+    font-family: pokemon;
+    letter-spacing: .15em;
+    white-space: nowrap;
+}
+
+
+.btnContainer {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.submit {
+    border: none;
+    background: none;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+#results {
+    margin-top: 2em;
+}
+
+#spriteImgContainer{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+#spriteImg {
+    width: 250px;
+    height: 250px;
+}
+
+#information {
+    background-color: #53de2c;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+
+
