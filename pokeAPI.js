@@ -96,7 +96,7 @@ function displayResults(json) {
     movesText.id = "movesText";
     moves.appendChild(movesText);
 
-    for(i = 0; i < pokeMoves.length; i++) {  //?Need to figure out how to add to a drop down menu and add a text label before drop down similar to "name: "
+    for(i = 0; i < pokeMoves.length; i++) {
         let moves = document.getElementById('infoContainer');
         let movesP = document.createElement('p');
         movesP.textContent = pokeMoves[i].move.name;
