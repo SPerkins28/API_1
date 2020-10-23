@@ -3,6 +3,11 @@
     src: url(fonts/pokemon_solid.ttf);
 }
 
+@font-face {
+    font-family: 'pokedex';
+    src: url(fonts/PKMN\ RBYGSC.ttf);
+}
+
 .jumbotron {
     background: url('./assets/pokemonDrk.jpg');
     background-size: cover;
@@ -90,10 +95,17 @@ img {
     height: 250px;
 }
 
-#information {
-    background-color: #53de2c;
+#infoContainer {
+    /* background-color: #53de2c; <--- added to JS styling */
+    font-family: pokedex;
     border-radius: 10px;
     padding: 2em;
+    overflow: scroll;
+    height: 250px;
+}
+
+#moves {
+    text-align: center;
 }
 
 

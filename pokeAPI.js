@@ -10,17 +10,12 @@ searchForm.addEventListener('submit', fetchResults);
 function fetchResults(e) {
     e.preventDefault();
     url = `${baseURL}pokemon/${searchTerm.value.toLowerCase()}`;
-    console.log(url); //? Works to this point. Need to fetch data from here
+    console.log(url); 
     
     fetch(url)
         .then(function(result) {
             return result.json(); //? jsonifying the data result from url
         }) .then (function(json) {
-            // let id = json.id;
-            // console.log(id);
-            // fetch(`${baseURL}evolution-chain/${id}/`) //? tried to get evolution chain but pokemon ids do not match up with evolution ids in api
-            // .then(res => res.json())
-            // .then(data => console.log(data))  
             displayResults(json);
         });
 }
@@ -30,18 +25,18 @@ function displayResults(json) {
     while (addImg.firstChild) {
         addImg.removeChild(addImg.firstChild);
     }
-
-    let name = document.getElementById('information');
+    
+    let name = document.getElementById('infoContainer');
     while (name.firstChild) {
         name.removeChild(name.firstChild);
     }
 
-    let type = document.getElementById('information');
+    let type = document.getElementById('infoContainer');
     while (type.firstChild) {
         type.removeChild(type.firstChild);
     }
 
-    let weight = document.getElementById('information');
+    let weight = document.getElementById('infoContainer');
     while (weight.firstChild) {
         weight.removeChild(weight.firstChild);
     }
@@ -57,6 +52,10 @@ function displayResults(json) {
     console.log(pokeWeight);
     let pokeMoves = json.moves;
     console.log(pokeMoves);
+
+    //infoContainer Style
+    let infoContainer = document.getElementById('infoContainer');
+    infoContainer.style.backgroundColor = "#53de2c";
 
     //Add Image after submit
     let img = document.createElement('img');
@@ -82,10 +81,24 @@ function displayResults(json) {
     pokeWeightP.id = "weight";
     weight.appendChild(pokeWeightP);
 
-    // for(i = 0; i < pokeMoves.length; i++) {   //? for loop works. Need to create a drop down menu and create element to put inside html once populated
-    //     let moves = document.getElementById('pokeInfo');
-    //     let movesP = document.createElement('p');
-    //     movesP.textContent = pokeMoves[i].move.name;
-    //     moves.appendChild(movesP);
-    // }
+    // let results = document.getElementById('resultsRow');
+    // let newDiv = document.createElement('div');
+    // newDiv.class = "col-sm=3";
+    // newDiv.id = "information";
+    // results.appendChild(newDiv);
+
+    let moves = document.getElementById('infoContainer');
+    let movesText = document.createElement('p');
+    movesText.textContent = "Learnable Moves:";
+    movesText.id = "movesText";
+    moves.appendChild(movesText);
+
+    for(i = 0; i < pokeMoves.length; i++) {  //?Need to figure out how to add to a drop down menu and add a text label before drop down similar to "name: "
+        let moves = document.getElementById('infoContainer');
+        let movesP = document.createElement('p');
+        movesP.textContent = pokeMoves[i].move.name;
+        movesP.id = "moves"
+        moves.appendChild(movesP);
+    }
+    
 }
