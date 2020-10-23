@@ -102,6 +102,7 @@ img {
     padding: 2em;
     overflow: scroll;
     height: 250px;
+    font-size: .75em;
 }
 
 #moves {

@@ -45,12 +45,15 @@ function displayResults(json) {
     console.log(pokeInfo);
     let spriteImg = json.sprites.front_default;
     let pokeName = json.forms[0].name;
+    let pokeNameUC = pokeName.charAt(0).toUpperCase() + pokeName.slice(1);
     console.log(pokeName);
     let pokeType = json.types[0].type.name;
+    let pokeTypeUC = pokeType.charAt(0).toUpperCase() + pokeType.slice(1);
     console.log(pokeType);
     let pokeWeight = json.weight;
     console.log(pokeWeight);
     let pokeMoves = json.moves;
+    // let pokeMovesUC = pokeMoves.charAt(0).toUpperCase() + pokeMoves.slice(1);
     console.log(pokeMoves);
 
     //infoContainer Style
@@ -65,13 +68,13 @@ function displayResults(json) {
 
     //Add Name after submit
     let pokeNameP = document.createElement('p');
-    pokeNameP.textContent = `Name: ${pokeName}`;
+    pokeNameP.textContent = `Name: ${pokeNameUC}`;
     pokeNameP.id = "name";
     name.appendChild(pokeNameP);
 
     //Add Type after submit
     let pokeTypeP = document.createElement('p');
-    pokeTypeP.textContent = `Type: ${pokeType}`;
+    pokeTypeP.textContent = `Type: ${pokeTypeUC}`;
     pokeTypeP.id = "type";
     type.appendChild(pokeTypeP);
 
