@@ -4,7 +4,7 @@
 }
 
 .jumbotron {
-    background: url('/Projects/API_1/assets/pokemonDrk.jpg');
+    background: url('./assets/pokemonDrk.jpg');
     background-size: cover;
     background-position: center;
     color: yellow;
