@@ -99,7 +99,7 @@ function displayResults(json) {
     for(i = 0; i < pokeMoves.length; i++) {
         let moves = document.getElementById('infoContainer');
         let movesP = document.createElement('p');
-        movesP.textContent = pokeMoves[i].move.name;
+        movesP.textContent = pokeMoves[i].move.name.charAt(0).toUpperCase() + pokeMoves[i].move.name.slice(1);
         movesP.id = "moves"
         moves.appendChild(movesP);
     }
