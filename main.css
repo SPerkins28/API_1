@@ -13,7 +13,7 @@
     background-size: cover;
     background-position: center;
     color: yellow;
-    text-shadow: #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px; /*? Syntax --> text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit */
+    text-shadow: #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px, #0D42E4 0px 0px 4px; 
     text-align: right;
     height: 30vh;
     font-family: pokemon;
